@@ -2,6 +2,8 @@
 Deep learning tutorial following the videos made by codebasics on Youtube
 
 1st day: About basics of deep learning
+-1. Digits Classification
+
 
 2nd day: 
 
