@@ -4,6 +4,7 @@ Deep learning tutorial following the videos made by codebasics on Youtube
 ### 1st day: About basics of deep learning
 1. Digits Classification
 2. Loss Function
+3. Matrix Multiplication
 
 ### 2nd day: 
 
