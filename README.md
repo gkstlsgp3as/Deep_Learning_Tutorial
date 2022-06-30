@@ -8,6 +8,7 @@ Deep learning tutorial following the videos made by codebasics on Youtube
 
 ### 2nd day: About basics of deep learning #2
 4. Loss Function
+5. Gradient Descent
 
 ### 3rd day: 
 
