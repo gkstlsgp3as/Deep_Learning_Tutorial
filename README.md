@@ -6,7 +6,7 @@ Deep learning tutorial following the videos made by codebasics on Youtube
 2. Activation Function
 3. Matrix Multiplication
 
-### 2nd day:
+### 2nd day: About basics of deep learning #2
 4. Loss Function
 
 ### 3rd day: 
