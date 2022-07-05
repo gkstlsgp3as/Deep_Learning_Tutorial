@@ -12,7 +12,11 @@ Deep learning tutorial following the videos made by codebasics on Youtube
 6. Stochastic Gradient Descent 
 
 ### 3rd day: 
+7. Digits Classification-Tensorboard
+8. GPU benchmark
 
 ### 4th day: 
 
 ### 5th day: 
+
+### 6th day:
