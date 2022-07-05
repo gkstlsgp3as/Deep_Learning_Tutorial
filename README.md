@@ -16,6 +16,7 @@ Deep learning tutorial following the videos made by codebasics on Youtube
 8. GPU benchmark
 
 ### 4th day: 
+9. ANN
 
 ### 5th day: 
 
