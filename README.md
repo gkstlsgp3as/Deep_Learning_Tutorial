@@ -17,6 +17,8 @@ Deep learning tutorial following the videos made by codebasics on Youtube
 
 ### 4th day: 
 9. ANN
+10. Precision, Recall, F1 score, True positive
+11. Dropout Regularization
 
 ### 5th day: 
 
