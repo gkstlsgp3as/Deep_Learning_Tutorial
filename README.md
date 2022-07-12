@@ -20,6 +20,9 @@ Deep learning tutorial following the videos made by codebasics on Youtube
 10. Precision, Recall, F1 score, True positive
 11. Dropout Regularization
 
-### 5th day: 
+### 5th day: Real Example
+Collecting Datasets for real practice on deep learning  
 
-### 6th day:
+### 6th day: Real Example
+12. CNN
+Estimating ground-level PM2.5 using datasets with ANN and CNN
