@@ -22,4 +22,4 @@ for i in range(len(fl)):
     if len(date) == 5: 
         date = date[0:4]+'0'+date[-1:]
     
-    xlsx.to_csv(outPath+date+'.csv')
+    xlsx.to_csv(outPath+date+'.csv') # convert to csv
