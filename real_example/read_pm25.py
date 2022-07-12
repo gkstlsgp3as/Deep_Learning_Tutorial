@@ -182,13 +182,5 @@ df['Mon']=df['Date'].dt.month
 df=df.drop(['Unnamed: 0'], axis=1)
 
 #%% plot
-#df=df.set_index('Date')
 
-#df_samp = df[df['측정소명']=='중구']
-#df_sum = pd.DataFrame()
-#df_sum['PM25'] = df_samp.PM25.resample('1D').mean()
-#df_sum['PM25'] = df.PM25.resample('1D').mean()
 sns.boxplot(x="Mon", y="PM25", data=df)
-
-#plt.plot(df.index, df['PM25'])
-#plt.plot(df_sum.index, df_sum['PM25'])
