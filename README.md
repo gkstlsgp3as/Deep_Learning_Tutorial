@@ -24,5 +24,5 @@ Deep learning tutorial following the videos made by codebasics on Youtube
 Collecting Datasets for real practice on deep learning  
 
 ### 6th day: Real Example
-12. CNN
+12. CNN  
 Estimating ground-level PM2.5 using datasets with ANN and CNN
