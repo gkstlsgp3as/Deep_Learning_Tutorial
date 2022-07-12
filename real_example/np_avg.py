@@ -66,4 +66,4 @@ for i, d in enumerate(range(1,32)):
         nc.close()
         
 with open(rootPath + 'GEMS_z_norm.pkl','wb') as f:
-    pickle.dump([avg,sd],f)
+    pickle.dump([avg,sd],f) # dump pickle
