@@ -23,32 +23,35 @@
 이로부터 측정소 코드와 위경도 좌표 만을 포함한 st_loc.csv 파일을 만듦.  
 
 #### 코드 설명: 아래 제목은 #%%로 분리되어 있음.   
-+	read csv files
--read_csv()로 파일을 읽음. 한글이 포함되어 있으므로 ‘unicode’로 읽어야 함. 
--for문 내에서 파일을 읽으며, 각 측정소 종류 별 개수를 출력함. 
-+	read csv files in March
--21년 3월에 해당하는 csv파일을 읽은 후, 1일부터 31일까지 for문 내에서 측정소 종류 별 개수를 출력함. 
-+	preprocessing data in 2021
--2021년의 월별 파일을 모두 읽으며, 각 파일을 열 때 nan 값이 포함된 열을 dropna()로 삭제함.
--‘측정일시’ 열이 datetime 타입과 같이 00시에서 23시가 아닌, 01부터 24시까지로 입력되어 있기 때문에 24시의 경우 datetime 타입으로 형변환이 되지 못함. 따라서 해당 경우를 er_ind로 인덱싱하고, 다음 월 00시로 변경하는 과정을 거침. 이후 datetime 타입으로 변환함. 
--2021년 월별 데이터를 concat()으로 합쳐 ‘2021_PM25.csv’ 파일로 통합함. 
-+	load data
--‘2021_PM25.csv’ 파일을 읽고, 파일을 읽을 때 변수가 object 타입으로 읽히기 때문에 to_numeric()이나 to_datetime()으로 형변환하여 읽음. 
--측정소 위경도 정보가 포함된 ‘st_loc.csv’ 파일을 읽음. 
-+	pre-process network
--측정소 종류가 ‘도시대기’, ‘교외대기’와 같이 한글로 저장되어 있어 처리가 곤란하므로 0, 1, 2와 같이 숫자로 변환.
-+	Insert coordinates of stations
--앞의 st_loc.csv를 읽은 st_df 데이터프레임을 2021_PM25.csv로 얻은 df 데이터프레임과 merge()로 합침. 측정소코드를 기준으로 합칠 수 있음. 
-+	split into monthly data
--2021년 전체 데이터가 크므로 월별로 분리 
++	read csv files  
+-read_csv()로 파일을 읽음. 한글이 포함되어 있으므로 ‘unicode’로 읽어야 함.   
+-for문 내에서 파일을 읽으며, 각 측정소 종류 별 개수를 출력함.   
++	read csv files in March  
+-21년 3월에 해당하는 csv파일을 읽은 후, 1일부터 31일까지 for문 내에서 측정소 종류 별 개수를 출력함.   
++	preprocessing data in 2021  
+-2021년의 월별 파일을 모두 읽으며, 각 파일을 열 때 nan 값이 포함된 열을 dropna()로 삭제함.  
+-‘측정일시’ 열이 datetime 타입과 같이 00시에서 23시가 아닌, 01부터 24시까지로 입력되어 있기 때문에 24시의 경우 datetime 타입으로     형변환이 되지 못함. 따라서 해당 경우를 er_ind로 인덱싱하고, 다음 월 00시로 변경하는 과정을 거침. 이후 datetime 타입으로 변환함.   
+-2021년 월별 데이터를 concat()으로 합쳐 ‘2021_PM25.csv’ 파일로 통합함.    
++	load data   
+-‘2021_PM25.csv’ 파일을 읽고, 파일을 읽을 때 변수가 object 타입으로 읽히기 때문에   
+to_numeric()이나 to_datetime()으로 형변환하여 읽음.   
+-측정소 위경도 정보가 포함된 ‘st_loc.csv’ 파일을 읽음.   
++	pre-process network  
+-측정소 종류가 ‘도시대기’, ‘교외대기’와 같이 한글로 저장되어 있어 처리가 곤란하므로 0, 1, 2와 같이 숫자로 변환.  
++	Insert coordinates of stations  
+-앞의 st_loc.csv를 읽은 st_df 데이터프레임을 2021_PM25.csv로 얻은 df 데이터프레임과 merge()로 합침.  
+측정소코드를 기준으로 합칠 수 있음.   
++	split into monthly data  
+-2021년 전체 데이터가 크므로 월별로 분리   
 
 ### 3) nc_avg.py
 : Z 점수 정규화를 위한 데이터 평균 및 표준편차를 계산하는 코드 
 #### 코드 설명: 아래 제목은 #%%로 분리되어 있음. 
-+	define function
--open_netcdf() 함수를 정의
--GEMS 데이터가 netcdf4 형태로 저장되어 있으므로 Dataset()로 읽음.
-+	calculate mean and std
--2021년 3월 파일에서 일별로 gems_rad, gems_geo, pm25 변수, ugrd, vgrd와 같은 기상 변수를 읽은 후 mean()과 std()를 이용해 axis=1, 즉, 열 단위로 평균 및 표준편차를 계산하여 pickle 파일로 저장. 
++	define function  
+-open_netcdf() 함수를 정의   
+-GEMS 데이터가 netcdf4 형태로 저장되어 있으므로 Dataset()로 읽음.   
++	calculate mean and std  
+-2021년 3월 파일에서 일별로 gems_rad, gems_geo, pm25 변수, ugrd, vgrd와 같은 기상 변수를 읽은 후   
+mean()과 std()를 이용해 axis=1, 즉, 열 단위로 평균 및 표준편차를 계산하여 pickle 파일로 저장.   
 
 
