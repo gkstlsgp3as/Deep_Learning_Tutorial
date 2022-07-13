@@ -54,17 +54,43 @@ Option. Oversampling
 11. pair-wise analysis    
 -scatter()로 참값과 예측값의 차이, 참값, 예측값에 대한 scatter plot을 그림.   
 -density plot을 그릴 때는 gaussian_kde로 데이터의 밀도를 구한 후 이를 scatter()로 그림.  
+-아직 colorbar를 적절하게 위치시키는 방법을 찾지 못하였는데, 추후 수정 예정. 
 
+![ANN_pair_analy](https://user-images.githubusercontent.com/58411517/178697621-e76e74ac-1979-41b4-b2ac-5a8f08988642.png)
+[ANN pair-wise analysis]
+![CNN_pair_analy (1)](https://user-images.githubusercontent.com/58411517/178698248-b637af7f-b362-4238-8151-18e5d4d0e565.png)
+[CNN pair-wise analysis]
+
+=> UGRD와 VGRD를 통해 바람이 불지 않을 때 극단값이 커지면서 오차가 많이 발생하였으며,  
+TMP와 RH는 각기 초미세먼지와 비례, 반비례하는 관계를 가지고 있어 농도치가 높아질 때 오차가 커지는 것을 확인할 수 있었음.  
+HPBL은 평균치에 해당하는 1000~2000 m에서 높은 농도치를 가지며 큰 오차를 가진 것으로 보임.   
+=> 기상 변수에 따른 오차 발생 양상을 확인 할 수 있었음. 
 
 12. error analysis    
 -양의 오차, 음의 오차, 오차 범위가 크지 않은 경우로 나누어 변수와의 관계를 파악하기 위한 히스토그램을 그림.   
+
 ![image](https://user-images.githubusercontent.com/58411517/178696938-b53b60f1-6cf9-49ae-8ca0-a1909a31a2e6.png)
 [ANN 음의 오차 비교]
+![ANN_pos](https://user-images.githubusercontent.com/58411517/178697844-baf876b6-eeed-409b-bffe-ae597011b454.png)
+[ANN 양의 오차 비교]
+![ANN_non](https://user-images.githubusercontent.com/58411517/178698583-9e8fb8c9-092f-48c4-872b-105440a603b4.png)
+[ANN 오차가 크지 않을 때 비교]
 
+![CNN_neg](https://user-images.githubusercontent.com/58411517/178698090-43b53552-7579-4139-bf3d-8ce0e5d40b36.png)
+[CNN 음의 오차 비교]
+![CNN_pos](https://user-images.githubusercontent.com/58411517/178698358-ddcfa0aa-8493-4e62-827e-2b80a5580652.png)
+[CNN 양의 오차 비교]
+![CNN_non](https://user-images.githubusercontent.com/58411517/178698187-c3b74075-e369-4c06-8712-ccfbfcbb66e6.png)
+[CNN 오차 크지 않을 때 비교]
 
+=> 유의미한 해석은 얻지 못하였음. 
 
 13. explicit comparison    
 -한반도 지도 상에 데이터 비교  
-14. estimates line plot    
--일별, 시간별, 일-시간별 PM2.5 농도 참값과 예측값을 비교하는 선형그래프를 그림.   
+![ANN_pair_analy](https://user-images.githubusercontent.com/58411517/178697621-e76e74ac-1979-41b4-b2ac-5a8f08988642.png)
+[ANN 한반도]
+![CNN_comp (1)](https://user-images.githubusercontent.com/58411517/178698136-c48d2d93-9e25-45f6-a8e4-c5ca28641b5d.png)
+[CNN 한반도]
 
+=> 원본 데이터와 비교하였을 때, 다소 색의 채도가 낮아진 것을 확인하였음.  
+이는 산출 과정에서 극단값이 완화되었기 때문인 것으로 보임. 
