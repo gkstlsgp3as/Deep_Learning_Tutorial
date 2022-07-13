@@ -87,7 +87,7 @@ HPBL은 평균치에 해당하는 1000~2000 m에서 높은 농도치를 가지�
 
 13. explicit comparison    
 -한반도 지도 상에 데이터 비교  
-![ANN_pair_analy](https://user-images.githubusercontent.com/58411517/178697621-e76e74ac-1979-41b4-b2ac-5a8f08988642.png)
+![ANN_comp (1)](https://user-images.githubusercontent.com/58411517/178699830-d1cc0253-c778-4fb8-a9e7-a46f7f9ecf2c.png)
 [ANN 한반도]
 ![CNN_comp (1)](https://user-images.githubusercontent.com/58411517/178698136-c48d2d93-9e25-45f6-a8e4-c5ca28641b5d.png)
 [CNN 한반도]
